@@ -13,8 +13,10 @@
   }
   * { box-sizing: border-box; }
   body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.6 "Segoe UI", system-ui, -apple-system, sans-serif; }
-  .wrap { max-width: 760px; margin: 0 auto; padding: 48px 20px 64px; }
-  header { display: flex; align-items: center; gap: 16px; margin-bottom: 32px; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 28px 20px 64px; }
+  nav { display: flex; gap: 22px; justify-content: flex-end; font-size: 15px; font-weight: 600; margin-bottom: 28px; flex-wrap: wrap; }
+  nav a { color: var(--ink); text-decoration: none; } nav a:hover, nav a[aria-current] { color: var(--accent); }
+  header { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; }
   header img { width: 72px; height: 72px; border-radius: 16px; }
   h1 { margin: 0; font-size: 36px; line-height: 1.1; }
   .tag { color: var(--muted); margin: 4px 0 0; }
@@ -22,11 +24,19 @@
   h2 { font-size: 20px; margin: 0 0 8px; }
   ul { padding-left: 20px; margin: 8px 0 0; }
   a { color: var(--accent); }
+  .yt { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; margin-top: 14px; }
+  .yt img { width: 210px; height: auto; display: block; }
   footer { color: var(--muted); font-size: 14px; margin-top: 40px; display: flex; gap: 18px; flex-wrap: wrap; }
 </style>
 </head>
 <body>
 <div class="wrap">
+  <nav aria-label="Site">
+    <a href="index.html" aria-current="page">Home</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Service</a>
+  </nav>
+
   <header>
     <img src="logo-120.png" alt="CorgiLogix logo: a corgi wearing a graduation cap">
     <div>
@@ -43,22 +53,33 @@
   </div>
 
   <div class="card">
-    <h2>About the CorgiLogix app</h2>
+    <h2>Publishing to YouTube</h2>
     <p>The CorgiLogix app is a private tool used only by the channel owner to produce these videos and publish them
-      to the CorgiLogix channel. When connected to YouTube, it:</p>
+      to the CorgiLogix YouTube channel using the YouTube API Services. When connected to YouTube, it:</p>
     <ul>
       <li>uploads videos the owner created to the owner's own channel,</li>
       <li>sets each video's title, description, thumbnail, captions and release time,</li>
       <li>checks whether a scheduled video has gone live.</li>
     </ul>
-    <p>It does not access anyone else's account and does not sell or share any data.
-      See the <a href="privacy.html">privacy policy</a> for details.</p>
+    <p>It does not access anyone else's account and does not sell or share any data. See our
+      <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Service</a>.</p>
+    <div class="yt">
+      <a href="https://www.youtube.com/channel/UC2zf1ODRYH5CFe901Ntht4Q" title="CorgiLogix on YouTube">
+        <picture>
+          <source srcset="developed-with-youtube-light.png" media="(prefers-color-scheme: dark)">
+          <img src="developed-with-youtube-dark.png" alt="Developed with YouTube">
+        </picture>
+      </a>
+      <a href="https://www.youtube.com/channel/UC2zf1ODRYH5CFe901Ntht4Q">Watch CorgiLogix on YouTube →</a>
+    </div>
   </div>
 
   <footer>
     <span>© 2026 CorgiLogix</span>
-    <a href="privacy.html">Privacy policy</a>
-    <a href="terms.html">Terms of service</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Service</a>
+    <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>
+    <a href="https://policies.google.com/privacy">Google Privacy Policy</a>
   </footer>
 </div>
 </body>
